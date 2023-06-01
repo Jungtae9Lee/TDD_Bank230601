@@ -36,16 +36,16 @@ TEST_F(AccountTest, Interest)
 	EXPECT_EQ(3, account.getInterest());
 }
 
-//TEST_F(AccountTest, IncreaseAfterSetInterest)
-//{
-//	account.setInterest(3);
-//	account.increase();
-//	EXPECT_EQ(10000 * 1.03, account.getBalance());
-//}
-//
-//TEST_F(AccountTest, ExpectBalanceYears)
-//{
-//	account.setInterest(3);
-//	EXPECT_EQ(10000 * 1.03 * 1.03, account.expectBalanceYears(2));
-//}
-//
+TEST_F(AccountTest, IncreaseAfterSetInterest)
+{
+	account.setInterest(3);
+	account.increase();
+	EXPECT_EQ(10000 * 1.03, account.getBalance());
+}
+
+TEST_F(AccountTest, ExpectBalanceYears)
+{
+	account.setInterest(3);
+	EXPECT_EQ(10000 * 1.03 * 1.03, account.expectBalanceYears(2));
+}
+
